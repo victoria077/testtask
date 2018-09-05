@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 1024px;
+      height: 768px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      width: 100%;
+      height: 100%;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .slide_2 {
+      background-image: url(img1/back2.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide_1 {
+      background-image: url(img1/back1.png);
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .styleForImg {
+      width: 100%;
+      height: 100%;
+      animation-name: slideInUp;
+      margin-top: 10px;
+      animation-duration: 0.5s;
+    }
+
+    @-webkit-keyframes slideInUp {
+      from {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes slideInUp {
+      from {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .slideInUp {
+      -webkit-animation-name: slideInUp;
+      animation-name: slideInUp;
+    }
+
+    .wrap {
+      position: relative;
+    }
+
+    .wrapper {
+      right: 400px;
+      top: -130px;
+      z-index: 2;
+      position: absolute;
+    }
+
+    .ring {
+      display: inline-block;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: 2px solid #e08f49;
+    }
+
+    .ring2 {
+      width: 40px;
+      height: 40px;
+      border: 2px solid #e08f49;
+      background-color: #f0b993;
+      margin-top: -51px;
+      margin-left: 7px;
+    }
+
+    .ring3 {
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      background-color: #e08f49;
+      border: 2px solid #e08f49;
+      margin-top: -33px;
+      margin-left: 18px;
+    }
+
+    .wrapper2 {
+      right: 715px;
+      top: 40px;
+      z-index: 2;
+      position: absolute;
+
+    }
+
+    .ring4 {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: 2px solid #e08f49;
+    }
+
+
+    .ring5 {
+      width: 21px;
+      height: 21px;
+      border: 2px solid #e08f49;
+      background-color: #f0b993;
+      margin-top: -29px;
+      margin-left: 4px;
+    }
+
+    .ring6 {
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      background-color: #e08f49;
+      border: 2px solid #e08f49;
+      margin-top: -20px;
+      margin-left: 10px;
+    }
+
+    .wrapper3 {
+      right: 515px;
+      top: 150px;
+      z-index: 2;
+      position: absolute;
+
+    }
+
+    .ring7 {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: 2px solid #e08f49;
+    }
+
+
+    .ring8 {
+      width: 12px;
+      height: 12px;
+      border: 2px solid #e08f49;
+      background-color: #f0b993;
+      margin-top: -20px;
+      margin-left: 4px;
+    }
+
+    .ring9 {
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      background-color: #e08f49;
+      border: 2px solid #e08f49;
+      margin-top: -12px;
+      margin-left: 8px;
+    }
+
+    .wrapper4 {
+      right: 178px;
+      top: 130px;
+      z-index: 2;
+      position: absolute;
+
+    }
+
+    .ring7 {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: 2px solid #e08f49;
+    }
+
+
+    .ring8 {
+      width: 12px;
+      height: 12px;
+      border: 2px solid #e08f49;
+      background-color: #f0b993;
+      margin-top: -20px;
+      margin-left: 4px;
+    }
+
+    .ring9 {
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      background-color: #e08f49;
+      border: 2px solid #e08f49;
+      margin-top: -12px;
+      margin-left: 8px;
+    }
+
+    .circle {
+      border-radius: 100%;
+      -webkit-animation: pulsing 2s infinite;
+      animation: pulsing 2s infinite;
+    }
+
+    @-webkit-keyframes pulsing {
+      0% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5)
+      }
+      50% {
+        -webkit-transform: scale(0.7, 0.7);
+        transform: scale(0.7, 0.7);
+      }
+      100% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+      }
+    }
+
+    @keyframes pulsing {
+      0% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5)
+      }
+      50% {
+        -webkit-transform: scale(0.7, 0.7);
+        transform: scale(0.7, 0.7);
+      }
+      100% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+  <div class="swiper-container swiper-container-v">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide_1"><img class="styleForImgg" src="img1/img1.png" />
+        <div class="wrap">
+          <div class="wrapper">
+            <div class="ring circle"></div>
+            <div class="ring2 circle"></div>
+            <div class="ring3 circle"></div>
+          </div>
+          <div class="wrapper2">
+            <div class="ring4 circle"></div>
+            <div class="ring5 circle"></div>
+            <div class="ring6 circle"></div>
+          </div>
+          <div class="wrapper3">
+            <div class="ring7 circle"></div>
+            <div class="ring8 circle"></div>
+            <div class="ring9 circle"></div>
+          </div>
+          <div class="wrapper4">
+            <div class="ring7 circle"></div>
+            <div class="ring8 circle"></div>
+            <div class="ring9 circle"></div>
+          </div>
+        </div>>
+      </div>
+    <div class="swiper-slide slide_2"><img class="styleForImg" src="img1/img2.png" /></div>
+      <div class="swiper-slide">
+        <div class="swiper-container swiper-container-h">
+          <div class="swiper-wrapper">
+            <img class="swiper-slide" alt="альтернативный текст" src="img1/back3.png" />
+            <img class="swiper-slide" alt="альтернативный текст" src="img1/back4.png" />
+            <img class="swiper-slide" alt="альтернативный текст" src="img1/back5.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Swiper JS -->
+  <script>
+    var swiperH = new Swiper('.swiper-container-h', {
+      spaceBetween: 50,
+      pagination: {
+        el: '.swiper-pagination-h',
+        clickable: true,
+      },
+    });
+    var swiperV = new Swiper('.swiper-container-v', {
+      direction: 'vertical',
+      spaceBetween: 50,
+      pagination: {
+        el: '.swiper-pagination-v',
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>
